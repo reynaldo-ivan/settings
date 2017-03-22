@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings>
+  <localRepository>/home/anzen/.m2/repository</localRepository>
+  <mirrors>
+    <mirror>
+      <!--Send all requests to the public group -->
+      <id>nexus</id>
+      <mirrorOf>*</mirrorOf>
+      <url>http://54.183.63.75:8081/repository/GrupoAnzen/</url>
+    </mirror>
+  </mirrors>
+  <activeProfiles>
+    <!--make the profile active all the time -->
+    <activeProfile>nexus</activeProfile>
+  </activeProfiles>
+  <profiles>
+    <profile>
+      <id>nexus</id>
+      <repositories>
+        <repository>
+          <id>central</id>
+          <url>http://central</url>
+          <releases>
+            <enabled>true</enabled>
+          </releases>
+          <snapshots>
+            <enabled>true</enabled>
+          </snapshots>
+        </repository>
+      </repositories>
+      <pluginRepositories>
+        <pluginRepository>
+          <id>central</id>
+          <url>http://central</url>
+          <releases>
+            <enabled>true</enabled>
+          </releases>
+          <snapshots>
+            <enabled>true</enabled>
+          </snapshots>
+        </pluginRepository>
+      </pluginRepositories>
+    </profile>
+  </profiles>
+  <pluginGroups>
+    <pluginGroup>org.sonatype.plugins</pluginGroup>
+  </pluginGroups>
+  <servers>
+    <server>
+      <id>nexus</id>
+      <username>bancaGenerica</username>
+      <password>root123</password>
+    </server>
+  </servers>
+</settings>
